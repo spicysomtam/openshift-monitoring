@@ -83,9 +83,6 @@ done
   Exit $unk
 }
 
-# Ensure credentials go into a project specific dir to prevent different project checks falling over each others credentials.
-export KUBECONFIG=~/.kube/$project
-
 oc login $cluster --token="$token" --insecure-skip-tls-verify=true > /dev/null 2>&1 || {
   echo "Login to $cluster failed."
   Exit $crit
