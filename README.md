@@ -35,9 +35,9 @@ check_oc_project.sh:
 
 ```
 
-# Po disk space monitoring
+# Pod disk space monitoring
 
-Similar to the pod monitoring, we can do a `df` in each pod and check disk space. Optionally can use the `-p` arg to specify a pattern match to select certain pods (eg ^jenkins).
+Similar to the pod monitoring, we can do a `df` in each pod and check disk space. Optionally can use the `-p` arg to specify a pattern match to select certain pods (eg `^jenkins`).
 
 
 ```
