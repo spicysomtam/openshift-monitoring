@@ -34,3 +34,23 @@ check_oc_project.sh:
         -l - Remain logged in to openshift.
 
 ```
+
+# Po disk space monitoring
+
+Similar to the pod monitoring, we can do a `df` in each pod and check disk space. Optionally can use the `-p` arg to specify a pattern match to select certain pods (eg ^jenkins).
+
+
+```
+$ ./check_oc_pod_diskspace.sh -h
+check_oc_pod_diskspace.sh:
+	-h - help.
+	-t <token>   - service account token used for login.
+	-n <project> - openshift project|namespace.
+	-o <cluster-url> - openshift cluster url; eg https://127.0.0.1:8443
+	-w - Warning disk usage % threshold. default 70.
+	-c - Critical disk usage % threshold. default 90.
+	-p - Pod name pattern match. default none: all pods.
+	-l - Remain logged in to openshift.
+	-d - Switch on debugging.
+
+```
